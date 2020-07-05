@@ -1,0 +1,12 @@
+{
+    "categories": {
+        "0": "customer support"
+    },
+    "demo_page": "https://i2b.co/bubble-hubspot-plugin",
+    "description": "HubSpot offers a full platform of marketing, sales, customer service, and CRM software — plus the methodology, resources, and support — to help businesses ...\n",
+    "image": "//s3.amazonaws.com/appforest_uf/f1570937413850x910560678727918300/guidelines_the-sprocket.svg",
+    "license": "open_source",
+    "link": "https://developers.hubspot.com/",
+    "name": "HubSpot",
+    "plugin_instructions": "Go to your HubSpot Account > Settings > Integrations > API Key\n\nUser ID. You can find it in your HubSpot dashboard URL\n\nIf you have an issue contact us directly here\nI2B Plugin Support\nhttps://i2b.co/plugins-support"
+}

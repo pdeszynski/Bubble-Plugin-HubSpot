@@ -1,0 +1,167 @@
+{
+    "add_basic_authentication": false,
+    "add_to_header": true,
+    "auth": "private_key_url",
+    "authentication_url": "https://app.hubspot.com/oauth/authorize",
+    "calls": {
+        "AAC": {
+            "initialized": true,
+            "method": "get",
+            "name": "Get Contacts",
+            "publish_as": "data",
+            "rank": 1,
+            "ret_value": "api.1570928942102x865265385814622200.plugin_api.AAC",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAC\":{\"caption\":\"Get Contact\",\"fields\":{\"_p_contacts\":{\"ret_value\":\"list.api.1570928942102x865265385814622200.plugin_api.AAC.contacts\",\"caption\":\"contacts\",\"path\":[\"contacts\"]},\"_p_has-more\":{\"ret_value\":\"boolean\",\"caption\":\"has-more\",\"path\":[\"has-more\"]},\"_p_vid-offset\":{\"ret_value\":\"number\",\"caption\":\"vid-offset\",\"path\":[\"vid-offset\"]}}},\"plugin_api.AAC.contacts\":{\"caption\":\"Get Contacts contact\",\"fields\":{\"_p_addedAt\":{\"ret_value\":\"date\",\"caption\":\"addedAt\",\"path\":[\"addedAt\"]},\"_p_vid\":{\"ret_value\":\"number\",\"caption\":\"vid\",\"path\":[\"vid\"]},\"_p_canonical-vid\":{\"ret_value\":\"number\",\"caption\":\"canonical-vid\",\"path\":[\"canonical-vid\"]},\"_p_portal-id\":{\"ret_value\":\"number\",\"caption\":\"portal-id\",\"path\":[\"portal-id\"]},\"_p_is-contact\":{\"ret_value\":\"boolean\",\"caption\":\"is-contact\",\"path\":[\"is-contact\"]},\"_p_profile-token\":{\"ret_value\":\"_ignore\"},\"_p_profile-url\":{\"ret_value\":\"text\",\"caption\":\"profile-url\",\"path\":[\"profile-url\"]},\"_p_properties.firstname.value\":{\"ret_value\":\"text\",\"caption\":\"properties firstname value\",\"path\":[\"properties\",\"firstname\",\"value\"]},\"_p_properties.lastmodifieddate.value\":{\"ret_value\":\"date\",\"caption\":\"properties lastmodifieddate value\",\"path\":[\"properties\",\"lastmodifieddate\",\"value\"]},\"_p_properties.company.value\":{\"ret_value\":\"text\",\"caption\":\"properties company value\",\"path\":[\"properties\",\"company\",\"value\"]},\"_p_properties.lastname.value\":{\"ret_value\":\"text\",\"caption\":\"properties lastname value\",\"path\":[\"properties\",\"lastname\",\"value\"]},\"_p_identity-profiles\":{\"ret_value\":\"_ignore\"}}}}",
+            "url": "https://api.hubapi.com/contacts/v1/lists/all/contacts/all"
+        },
+        "AAH": {
+            "body": "{\n  \"properties\": [\n    {\n      \"property\": \"email\",\n      \"value\": \"<email>\"\n    },\n    {\n      \"property\": \"firstname\",\n      \"value\": \"<firstname>\"\n    },\n    {\n      \"property\": \"lastname\",\n      \"value\": \"<lastname>\"\n    },\n    {\n      \"property\": \"website\",\n      \"value\": \"<website>\"\n    },\n    {\n      \"property\": \"company\",\n      \"value\": \"<company>\"\n    },\n    {\n      \"property\": \"phone\",\n      \"value\": \"<phone>\"\n    },\n    {\n      \"property\": \"address\",\n      \"value\": \"<addressStreet>\"\n    },\n    {\n      \"property\": \"city\",\n      \"value\": \"<city>\"\n    },\n    {\n      \"property\": \"state\",\n      \"value\": \"<state>\"\n    },\n    {\n      \"property\": \"zip\",\n      \"value\": \"<zip>\"\n    }\n  ]\n}",
+            "body_params": {
+                "AAZ": {
+                    "key": "email",
+                    "private": true,
+                    "value": ""
+                },
+                "AAb": {
+                    "key": "firstname",
+                    "private": true,
+                    "value": ""
+                },
+                "AAd": {
+                    "key": "lastname",
+                    "private": true,
+                    "value": ""
+                },
+                "AAf": {
+                    "key": "website",
+                    "private": true,
+                    "value": ""
+                },
+                "AAh": {
+                    "key": "phone",
+                    "private": true,
+                    "value": ""
+                },
+                "AAp": {
+                    "doc": "",
+                    "key": "addressStreet",
+                    "private": true,
+                    "value": ""
+                },
+                "AAr": {
+                    "key": "city",
+                    "private": true,
+                    "value": ""
+                },
+                "AAt": {
+                    "doc": "Sort form like CA, MA",
+                    "key": "state",
+                    "private": true,
+                    "value": ""
+                },
+                "AAv": {
+                    "key": "zip",
+                    "private": true,
+                    "value": ""
+                },
+                "AAx": {
+                    "key": "company",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "doc_link": "https://developers.hubspot.com/docs/methods/contacts/create_contact",
+            "initialized": true,
+            "method": "post",
+            "name": "Add Contact",
+            "publish_as": "action",
+            "rank": 0,
+            "ret_value": "api.1570928942102x865265385814622200.plugin_api.AAH",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAH\":{\"caption\":\"Add Contact\",\"fields\":{\"_p_vid\":{\"ret_value\":\"number\",\"caption\":\"vid\",\"path\":[\"vid\"]},\"_p_canonical-vid\":{\"ret_value\":\"number\",\"caption\":\"canonical-vid\",\"path\":[\"canonical-vid\"]},\"_p_portal-id\":{\"ret_value\":\"number\",\"caption\":\"portal-id\",\"path\":[\"portal-id\"]},\"_p_is-contact\":{\"ret_value\":\"boolean\",\"caption\":\"is-contact\",\"path\":[\"is-contact\"]},\"_p_profile-token\":{\"ret_value\":\"text\",\"caption\":\"profile-token\",\"path\":[\"profile-token\"]},\"_p_profile-url\":{\"ret_value\":\"text\",\"caption\":\"profile-url\",\"path\":[\"profile-url\"]},\"_p_properties.zip.value\":{\"ret_value\":\"text\",\"caption\":\"properties zip value\",\"path\":[\"properties\",\"zip\",\"value\"]},\"_p_properties.zip.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.website.value\":{\"ret_value\":\"text\",\"caption\":\"properties website value\",\"path\":[\"properties\",\"website\",\"value\"]},\"_p_properties.website.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.firstname.value\":{\"ret_value\":\"text\",\"caption\":\"properties firstname value\",\"path\":[\"properties\",\"firstname\",\"value\"]},\"_p_properties.firstname.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.address.value\":{\"ret_value\":\"text\",\"caption\":\"properties address value\",\"path\":[\"properties\",\"address\",\"value\"]},\"_p_properties.address.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.city.value\":{\"ret_value\":\"text\",\"caption\":\"properties city value\",\"path\":[\"properties\",\"city\",\"value\"]},\"_p_properties.city.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.phone.value\":{\"ret_value\":\"text\",\"caption\":\"properties phone value\",\"path\":[\"properties\",\"phone\",\"value\"]},\"_p_properties.phone.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.company.value\":{\"ret_value\":\"text\",\"caption\":\"properties company value\",\"path\":[\"properties\",\"company\",\"value\"]},\"_p_properties.company.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.state.value\":{\"ret_value\":\"text\",\"caption\":\"properties state value\",\"path\":[\"properties\",\"state\",\"value\"]},\"_p_properties.state.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.email.value\":{\"ret_value\":\"text\",\"caption\":\"properties email value\",\"path\":[\"properties\",\"email\",\"value\"]},\"_p_properties.email.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.lastname.value\":{\"ret_value\":\"text\",\"caption\":\"properties lastname value\",\"path\":[\"properties\",\"lastname\",\"value\"]},\"_p_properties.lastname.versions\":{\"ret_value\":\"_ignore\"},\"_p_identity-profiles\":{\"ret_value\":\"_ignore\"}}}}",
+            "url": "https://api.hubapi.com/contacts/v1/contact/"
+        },
+        "ABp": {
+            "initialized": true,
+            "method": "get",
+            "name": "Get Contact by email",
+            "publish_as": "data",
+            "rank": 2,
+            "ret_value": "api.1570928942102x865265385814622200.plugin_api.ABp",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ABp\":{\"caption\":\"Get Contact by email\",\"fields\":{\"_p_vid\":{\"ret_value\":\"number\",\"caption\":\"vid\",\"path\":[\"vid\"]},\"_p_canonical-vid\":{\"ret_value\":\"number\",\"caption\":\"canonical-vid\",\"path\":[\"canonical-vid\"]},\"_p_portal-id\":{\"ret_value\":\"number\",\"caption\":\"portal-id\",\"path\":[\"portal-id\"]},\"_p_is-contact\":{\"ret_value\":\"boolean\",\"caption\":\"is-contact\",\"path\":[\"is-contact\"]},\"_p_profile-token\":{\"ret_value\":\"text\",\"caption\":\"profile-token\",\"path\":[\"profile-token\"]},\"_p_profile-url\":{\"ret_value\":\"text\",\"caption\":\"profile-url\",\"path\":[\"profile-url\"]},\"_p_properties.hs_all_accessible_team_ids.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_accessible_team_ids value\",\"path\":[\"properties\",\"hs_all_accessible_team_ids\",\"value\"]},\"_p_properties.hs_all_accessible_team_ids.versions\":{\"ret_value\":\"list.api.1570928942102x865265385814622200.plugin_api.ABp.properties.hs_all_accessible_team_ids.versions\",\"caption\":\"properties hs_all_accessible_team_ids versions\",\"path\":[\"properties\",\"hs_all_accessible_team_ids\",\"versions\"]},\"_p_properties.num_unique_conversion_events.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.num_unique_conversion_events.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_quarantined.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_email_quarantined value\",\"path\":[\"properties\",\"hs_email_quarantined\",\"value\"]},\"_p_properties.hs_email_quarantined.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_revenue.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_analytics_revenue value\",\"path\":[\"properties\",\"hs_analytics_revenue\",\"value\"]},\"_p_properties.hs_analytics_revenue.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_optout_7497542.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_optout_7497542.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.createdate.value\":{\"ret_value\":\"date_unix\",\"caption\":\"properties createdate value\",\"path\":[\"properties\",\"createdate\",\"value\"]},\"_p_properties.createdate.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_optout.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_email_optout value\",\"path\":[\"properties\",\"hs_email_optout\",\"value\"]},\"_p_properties.hs_email_optout.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_page_views.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_page_views.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.state.value\":{\"ret_value\":\"text\",\"caption\":\"properties state value\",\"path\":[\"properties\",\"state\",\"value\"]},\"_p_properties.state.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.zip.value\":{\"ret_value\":\"text\",\"caption\":\"properties zip value\",\"path\":[\"properties\",\"zip\",\"value\"]},\"_p_properties.zip.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_lifecyclestage_subscriber_date.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_lifecyclestage_subscriber_date.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_average_page_views.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_average_page_views.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.lastname.value\":{\"ret_value\":\"text\",\"caption\":\"properties lastname value\",\"path\":[\"properties\",\"lastname\",\"value\"]},\"_p_properties.lastname.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_is_contact.value\":{\"ret_value\":\"boolean\",\"caption\":\"properties hs_is_contact value\",\"path\":[\"properties\",\"hs_is_contact\",\"value\"]},\"_p_properties.hs_is_contact.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.phone.value\":{\"ret_value\":\"text\",\"caption\":\"properties phone value\",\"path\":[\"properties\",\"phone\",\"value\"]},\"_p_properties.phone.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_predictivecontactscore_v2.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_predictivecontactscore_v2.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.num_conversion_events.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.num_conversion_events.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_object_id.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id value\",\"path\":[\"properties\",\"hs_object_id\",\"value\"]},\"_p_properties.hs_object_id.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_event_completions.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_event_completions.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_hard_bounce_reason_enum.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_email_hard_bounce_reason_enum value\",\"path\":[\"properties\",\"hs_email_hard_bounce_reason_enum\",\"value\"]},\"_p_properties.hs_email_hard_bounce_reason_enum.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.firstname.value\":{\"ret_value\":\"text\",\"caption\":\"properties firstname value\",\"path\":[\"properties\",\"firstname\",\"value\"]},\"_p_properties.firstname.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.city.value\":{\"ret_value\":\"text\",\"caption\":\"properties city value\",\"path\":[\"properties\",\"city\",\"value\"]},\"_p_properties.city.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_all_team_ids.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_team_ids value\",\"path\":[\"properties\",\"hs_all_team_ids\",\"value\"]},\"_p_properties.hs_all_team_ids.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_num_broadcast_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_num_broadcast_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_recipient_fatigue_recovery_time.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_recipient_fatigue_recovery_time.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_timestamp.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_timestamp.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_visits.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_visits.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hubspot_team_id.value\":{\"ret_value\":\"text\",\"caption\":\"properties hubspot_team_id value\",\"path\":[\"properties\",\"hubspot_team_id\",\"value\"]},\"_p_properties.hubspot_team_id.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_linkedin_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_linkedin_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_visit_timestamp.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_visit_timestamp.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_last_engagement.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_last_engagement.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_searchable_calculated_phone_number.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_searchable_calculated_phone_number.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_domain.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_domain.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_touch_converting_campaign.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_touch_converting_campaign.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.company.value\":{\"ret_value\":\"text\",\"caption\":\"properties company value\",\"path\":[\"properties\",\"company\",\"value\"]},\"_p_properties.company.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_all_owner_ids.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_owner_ids value\",\"path\":[\"properties\",\"hs_all_owner_ids\",\"value\"]},\"_p_properties.hs_all_owner_ids.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.email.value\":{\"ret_value\":\"text\",\"caption\":\"properties email value\",\"path\":[\"properties\",\"email\",\"value\"]},\"_p_properties.email.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.website.value\":{\"ret_value\":\"text\",\"caption\":\"properties website value\",\"path\":[\"properties\",\"website\",\"value\"]},\"_p_properties.website.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.address.value\":{\"ret_value\":\"text\",\"caption\":\"properties address value\",\"path\":[\"properties\",\"address\",\"value\"]},\"_p_properties.address.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_visit_timestamp.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_visit_timestamp.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.lastmodifieddate.value\":{\"ret_value\":\"date_unix\",\"caption\":\"properties lastmodifieddate value\",\"path\":[\"properties\",\"lastmodifieddate\",\"value\"]},\"_p_properties.lastmodifieddate.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_timestamp.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_timestamp.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_google_plus_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_google_plus_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_touch_converting_campaign.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_touch_converting_campaign.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_facebook_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_facebook_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_predictivescoringtier.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_predictivescoringtier.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_twitter_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_twitter_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source_data_2.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source_data_2.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source_data_1.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source_data_1.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.lifecyclestage.value\":{\"ret_value\":\"text\",\"caption\":\"properties lifecyclestage value\",\"path\":[\"properties\",\"lifecyclestage\",\"value\"]},\"_p_properties.lifecyclestage.versions\":{\"ret_value\":\"_ignore\"},\"_p_identity-profiles\":{\"ret_value\":\"_ignore\"}}},\"plugin_api.ABp.properties.hs_all_accessible_team_ids.versions\":{\"caption\":\"Get Contact by email properties hs_all_accessible_team_ids version\",\"fields\":{\"_p_value\":{\"ret_value\":\"text\",\"caption\":\"value\",\"path\":[\"value\"]},\"_p_source-type\":{\"ret_value\":\"text\",\"caption\":\"source-type\",\"path\":[\"source-type\"]},\"_p_source-id\":{\"ret_value\":\"text\",\"caption\":\"source-id\",\"path\":[\"source-id\"]},\"_p_source-label\":{\"ret_value\":\"text\",\"caption\":\"source-label\",\"path\":[\"source-label\"]},\"_p_timestamp\":{\"ret_value\":\"number\",\"caption\":\"timestamp\",\"path\":[\"timestamp\"]},\"_p_selected\":{\"ret_value\":\"boolean\",\"caption\":\"selected\",\"path\":[\"selected\"]}}}}",
+            "url": "https://api.hubapi.com/contacts/v1/contact/email/[email]/profile",
+            "url_params": {
+                "ABv": {
+                    "key": "email",
+                    "private": true,
+                    "value": "testingapis@hubspot.com"
+                }
+            }
+        },
+        "ABw": {
+            "body": "{\n  \"properties\": [\n    {\n      \"property\": \"email\",\n      \"value\": \"<Email>\"\n    },\n    {\n      \"property\": \"firstname\",\n      \"value\": \"<FirstName>\"\n    },\n    {\n      \"property\": \"lastname\",\n      \"value\": \"<LastName>\"\n    },\n    {\n      \"property\": \"website\",\n      \"value\": \"<Webite>\"\n    },\n    {\n      \"property\": \"lifecyclestage\",\n      \"value\": \"<lifeCycleStage>\"\n    }\n  ]\n}",
+            "body_params": {
+                "ACH": {
+                    "key": "Email",
+                    "private": true,
+                    "value": "new-email222@hubspot.com"
+                },
+                "ACX": {
+                    "key": "FirstName",
+                    "private": true,
+                    "value": "spot"
+                },
+                "ACf": {
+                    "key": "LastName",
+                    "private": true,
+                    "value": "hub"
+                },
+                "ACn": {
+                    "key": "Webite",
+                    "private": true,
+                    "value": "http://updated.example.com"
+                },
+                "ACq": {
+                    "key": "lifeCycleStage",
+                    "private": true,
+                    "value": "customer"
+                }
+            },
+            "data_type": "text",
+            "get_headers": true,
+            "initialized": true,
+            "method": "post",
+            "name": "Update Contact",
+            "publish_as": "action",
+            "rank": 3,
+            "ret_value": "api.1570928942102x865265385814622200.plugin_api.ABw",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABw\":{\"caption\":\"Update Contact\",\"fields\":{\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"path\":[\"body\"]},\"_p_headers.date\":{\"ret_value\":\"date\",\"caption\":\"headers date\",\"path\":[\"headers\",\"date\"]},\"_p_headers.connection\":{\"ret_value\":\"_ignore\"},\"_p_headers.set-cookie\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-trace\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-daily\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-daily-remaining\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-interval-milliseconds\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-remaining\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-max\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-secondly\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-secondly-remaining\":{\"ret_value\":\"_ignore\"},\"_p_headers.access-control-allow-credentials\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-cache-status\":{\"ret_value\":\"_ignore\"},\"_p_headers.expect-ct\":{\"ret_value\":\"_ignore\"},\"_p_headers.strict-transport-security\":{\"ret_value\":\"_ignore\"},\"_p_headers.server\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-ray\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-request-id\":{\"ret_value\":\"_ignore\"}}}}",
+            "url": "https://api.hubapi.com/contacts/v1/contact/vid/[vid]/profile",
+            "url_params": {
+                "ACA": {
+                    "key": "vid",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        }
+    },
+    "generate_token_from_code_uri": "https://api.hubapi.com/oauth/v1/token",
+    "header_key": "Authorization: Bearer",
+    "human": "HubSpot",
+    "oauth_user_data_call": "https://api.hubapi.com/oauth/v1/me",
+    "scope": "contacts",
+    "shared_headers": {
+        "ADG": {
+            "key": "Content-Type",
+            "private": true,
+            "value": "application/json",
+            "visibility": "hidden"
+        }
+    },
+    "token_data_type": true,
+    "token_param_name": "hapikey"
+}
