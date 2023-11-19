@@ -1,0 +1,14 @@
+{
+    "category": "plugins",
+    "display": "Add Contact (NEW)",
+    "fields": {
+        "ADo": {
+            "caption": "Contact Data",
+            "editor": "key_value_list",
+            "name": "contactinfo",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}
