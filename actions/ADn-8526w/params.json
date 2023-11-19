@@ -10,6 +10,26 @@
             "value": "text"
         }
     },
+    "return_value": {
+        "ADp": {
+            "caption": "Contact Id",
+            "name": "hsid",
+            "rank": 0,
+            "value": "text"
+        },
+        "ADq": {
+            "caption": "Error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "ADr": {
+            "caption": "Error message",
+            "name": "errormessage",
+            "rank": 2,
+            "value": "text"
+        }
+    },
     "type": "server_side",
     "use_packages": true
 }

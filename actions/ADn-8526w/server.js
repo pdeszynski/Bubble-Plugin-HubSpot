@@ -28,7 +28,22 @@ async function(properties, context) {
             }
         });
         console.log('Contact created:', response.data);
+
+        // Ensure to extract the ID correctly based on the actual response structure
+        const contactId = response.data.id; // Adjust this as per the actual structure
+
+        return {
+            hsid: contactId, // Assuming 'id' is the correct field from the response
+            error: false,
+            errormessage: null
+        };
+        
     } catch (error) {
         console.error('Error creating contact:', error);
+        return {
+            hsid: null,
+            error: true,
+            errormessage: error.message
+        };
     }
 }
