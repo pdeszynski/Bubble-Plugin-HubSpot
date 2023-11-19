@@ -15,7 +15,7 @@ async function(properties, context) {
     // Set your HubSpot API key
     const apiKey = context.keys['API Key'];
 
-    // HubSpot API endpoint for creating contacts
+    // HubSpot API endpoint for creating contacts?
     const url = 'https://api.hubapi.com/crm/v3/objects/contacts';
 
     try {
