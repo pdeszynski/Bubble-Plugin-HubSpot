@@ -3,7 +3,7 @@
     "display": "HubSpot - Add Contact (custom)",
     "fields": {
         "ADo": {
-            "caption": "Contact Data",
+            "caption": "Contact Properties",
             "doc": "https://developers.hubspot.com/docs/api/crm/contacts#create-contacts",
             "editor": "key_value_list",
             "name": "contactinfo",

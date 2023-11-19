@@ -1,38 +1,45 @@
 {
     "category": "plugins",
-    "display": "HubSpot - Add Contact (custom)",
+    "display": "HubSpot - Update Contact (custom)",
     "fields": {
         "ADo": {
-            "caption": "Contact Data",
-            "doc": "https://developers.hubspot.com/docs/api/crm/contacts#create-contacts",
+            "caption": "Contact Properties",
+            "doc": "https://developers.hubspot.com/docs/api/crm/contacts#update-contacts",
             "editor": "key_value_list",
             "name": "contactinfo",
-            "rank": 0,
+            "rank": 1,
             "value": "text"
         },
         "ADs": {
             "caption": "Add the keys as named under your HubSpot account. To get the properties internal names  go to HubSpot > Settings > Data Management > Properties",
             "editor": "Label",
             "name": "how_it_works",
-            "rank": 2
+            "rank": 3
         },
         "ADu": {
             "caption": "Instructions",
             "editor": "Label",
             "name": "instructions",
-            "rank": 1
+            "rank": 2
         },
         "ADv": {
             "caption": "Example Keys",
             "editor": "Label",
             "name": "examples",
-            "rank": 3
+            "rank": 4
         },
         "ADw": {
             "caption": "email, firstname, lastname",
             "editor": "Label",
             "name": "example_details",
-            "rank": 4
+            "rank": 5
+        },
+        "ADz": {
+            "caption": "Contact Id",
+            "editor": "DynamicValue",
+            "name": "contactId",
+            "rank": 0,
+            "value": "text"
         }
     },
     "return_value": {
