@@ -1,7 +1,7 @@
 {
     "add_basic_authentication": false,
     "add_to_header": true,
-    "auth": "private_key_url",
+    "auth": "private_key_header",
     "authentication_url": "https://app.hubspot.com/oauth/authorize",
     "calls": {
         "AAC": {
@@ -12,11 +12,11 @@
             "rank": 1,
             "ret_value": "api.1570928942102x865265385814622200.plugin_api.AAC",
             "should_reinitialize": false,
-            "types": "{\"plugin_api.AAC\":{\"caption\":\"Get Contact\",\"fields\":{\"_p_contacts\":{\"ret_value\":\"list.api.1570928942102x865265385814622200.plugin_api.AAC.contacts\",\"caption\":\"contacts\",\"path\":[\"contacts\"]},\"_p_has-more\":{\"ret_value\":\"boolean\",\"caption\":\"has-more\",\"path\":[\"has-more\"]},\"_p_vid-offset\":{\"ret_value\":\"number\",\"caption\":\"vid-offset\",\"path\":[\"vid-offset\"]}}},\"plugin_api.AAC.contacts\":{\"caption\":\"Get Contacts contact\",\"fields\":{\"_p_addedAt\":{\"ret_value\":\"date\",\"caption\":\"addedAt\",\"path\":[\"addedAt\"]},\"_p_vid\":{\"ret_value\":\"number\",\"caption\":\"vid\",\"path\":[\"vid\"]},\"_p_canonical-vid\":{\"ret_value\":\"number\",\"caption\":\"canonical-vid\",\"path\":[\"canonical-vid\"]},\"_p_portal-id\":{\"ret_value\":\"number\",\"caption\":\"portal-id\",\"path\":[\"portal-id\"]},\"_p_is-contact\":{\"ret_value\":\"boolean\",\"caption\":\"is-contact\",\"path\":[\"is-contact\"]},\"_p_profile-token\":{\"ret_value\":\"_ignore\"},\"_p_profile-url\":{\"ret_value\":\"text\",\"caption\":\"profile-url\",\"path\":[\"profile-url\"]},\"_p_properties.firstname.value\":{\"ret_value\":\"text\",\"caption\":\"properties firstname value\",\"path\":[\"properties\",\"firstname\",\"value\"]},\"_p_properties.lastmodifieddate.value\":{\"ret_value\":\"date\",\"caption\":\"properties lastmodifieddate value\",\"path\":[\"properties\",\"lastmodifieddate\",\"value\"]},\"_p_properties.company.value\":{\"ret_value\":\"text\",\"caption\":\"properties company value\",\"path\":[\"properties\",\"company\",\"value\"]},\"_p_properties.lastname.value\":{\"ret_value\":\"text\",\"caption\":\"properties lastname value\",\"path\":[\"properties\",\"lastname\",\"value\"]},\"_p_identity-profiles\":{\"ret_value\":\"_ignore\"}}}}",
-            "url": "https://api.hubapi.com/contacts/v1/lists/all/contacts/all"
+            "types": "{\"plugin_api.AAC\":{\"caption\":\"Get Contact\",\"fields\":{\"_p_results\":{\"ret_value\":\"list.api.1570928942102x865265385814622200.plugin_api.AAC.results\",\"caption\":\"results\",\"path\":[\"results\"]},\"_p_paging.next.after\":{\"ret_value\":\"number\",\"caption\":\"paging next after\",\"sample_value\":\"752\",\"path\":[\"paging\",\"next\",\"after\"]},\"_p_paging.next.link\":{\"ret_value\":\"text\",\"caption\":\"paging next link\",\"sample_value\":\"https://api.hubapi.com/crm/v3/objects/contacts?after=752\",\"path\":[\"paging\",\"next\",\"link\"]}}},\"plugin_api.AAC.results\":{\"caption\":\"Get Contacts result\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"301\",\"path\":[\"id\"]},\"_p_properties.createdate\":{\"ret_value\":\"date\",\"caption\":\"properties createdate\",\"sample_value\":\"2019-10-07T04:00:17.142Z\",\"path\":[\"properties\",\"createdate\"]},\"_p_properties.email\":{\"ret_value\":\"text\",\"caption\":\"properties email\",\"sample_value\":\"no-reply@i2b.co\",\"path\":[\"properties\",\"email\"]},\"_p_properties.firstname\":{\"ret_value\":\"text\",\"caption\":\"properties firstname\",\"sample_value\":\"I2B\",\"path\":[\"properties\",\"firstname\"]},\"_p_properties.hs_object_id\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id\",\"sample_value\":\"301\",\"path\":[\"properties\",\"hs_object_id\"]},\"_p_properties.lastmodifieddate\":{\"ret_value\":\"date\",\"caption\":\"properties lastmodifieddate\",\"sample_value\":\"2022-08-16T15:41:25.128Z\",\"path\":[\"properties\",\"lastmodifieddate\"]},\"_p_properties.lastname\":{\"ret_value\":\"text\",\"caption\":\"properties lastname\",\"sample_value\":\"Jefferson\",\"path\":[\"properties\",\"lastname\"]},\"_p_createdAt\":{\"ret_value\":\"date\",\"caption\":\"createdAt\",\"sample_value\":\"2019-10-07T04:00:17.142Z\",\"path\":[\"createdAt\"]},\"_p_updatedAt\":{\"ret_value\":\"date\",\"caption\":\"updatedAt\",\"sample_value\":\"2022-08-16T15:41:25.128Z\",\"path\":[\"updatedAt\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "url": "https://api.hubapi.com/crm/v3/objects/contacts"
         },
         "AAH": {
-            "body": "{\n  \"properties\": [\n    {\n      \"property\": \"email\",\n      \"value\": \"<email>\"\n    },\n    {\n      \"property\": \"firstname\",\n      \"value\": \"<firstname>\"\n    },\n    {\n      \"property\": \"lastname\",\n      \"value\": \"<lastname>\"\n    },\n    {\n      \"property\": \"website\",\n      \"value\": \"<website>\"\n    },\n    {\n      \"property\": \"company\",\n      \"value\": \"<company>\"\n    },\n    {\n      \"property\": \"phone\",\n      \"value\": \"<phone>\"\n    },\n    {\n      \"property\": \"address\",\n      \"value\": \"<addressStreet>\"\n    },\n    {\n      \"property\": \"city\",\n      \"value\": \"<city>\"\n    },\n    {\n      \"property\": \"state\",\n      \"value\": \"<state>\"\n    },\n    {\n      \"property\": \"zip\",\n      \"value\": \"<zip>\"\n    }\n  ]\n}",
+            "body": "{\n  \"properties\": {\n      \"email\": \"<email>\",\n      \"firstname\": \"<firstname>\",\n      \"lastname\": \"<lastname>\",\n      \"website\": \"<website>\",\n      \"company\": \"<company>\",\n      \"phone\": \"<phone>\",\n      \"address\": \"<addressStreet>\",\n      \"city\": \"<city>\",\n      \"state\": \"<state>\",\n      \"zip\": \"<zip>\",\n      \"country\": \"<country>\"\n    }\n}",
             "body_params": {
                 "AAZ": {
                     "key": "email",
@@ -34,115 +34,240 @@
                     "value": ""
                 },
                 "AAf": {
+                    "allow_blank": true,
                     "key": "website",
                     "private": true,
                     "value": ""
                 },
                 "AAh": {
+                    "allow_blank": true,
                     "key": "phone",
                     "private": true,
                     "value": ""
                 },
                 "AAp": {
+                    "allow_blank": true,
                     "doc": "",
                     "key": "addressStreet",
                     "private": true,
                     "value": ""
                 },
                 "AAr": {
+                    "allow_blank": true,
                     "key": "city",
                     "private": true,
                     "value": ""
                 },
                 "AAt": {
-                    "doc": "Sort form like CA, MA",
+                    "allow_blank": true,
+                    "doc": "State like CA, MA",
                     "key": "state",
                     "private": true,
                     "value": ""
                 },
                 "AAv": {
+                    "allow_blank": true,
                     "key": "zip",
                     "private": true,
                     "value": ""
                 },
                 "AAx": {
+                    "allow_blank": true,
                     "key": "company",
+                    "private": true,
+                    "value": ""
+                },
+                "ADl": {
+                    "allow_blank": true,
+                    "key": "country",
                     "private": true,
                     "value": ""
                 }
             },
-            "doc_link": "https://developers.hubspot.com/docs/methods/contacts/create_contact",
+            "doc_link": "https://developers.hubspot.com/docs/api/crm/contacts",
             "initialized": true,
             "method": "post",
             "name": "Add Contact",
             "publish_as": "action",
             "rank": 0,
             "ret_value": "api.1570928942102x865265385814622200.plugin_api.AAH",
-            "should_reinitialize": true,
-            "types": "{\"plugin_api.AAH\":{\"caption\":\"Add Contact\",\"fields\":{\"_p_vid\":{\"ret_value\":\"number\",\"caption\":\"vid\",\"path\":[\"vid\"]},\"_p_canonical-vid\":{\"ret_value\":\"number\",\"caption\":\"canonical-vid\",\"path\":[\"canonical-vid\"]},\"_p_portal-id\":{\"ret_value\":\"number\",\"caption\":\"portal-id\",\"path\":[\"portal-id\"]},\"_p_is-contact\":{\"ret_value\":\"boolean\",\"caption\":\"is-contact\",\"path\":[\"is-contact\"]},\"_p_profile-token\":{\"ret_value\":\"text\",\"caption\":\"profile-token\",\"path\":[\"profile-token\"]},\"_p_profile-url\":{\"ret_value\":\"text\",\"caption\":\"profile-url\",\"path\":[\"profile-url\"]},\"_p_properties.zip.value\":{\"ret_value\":\"text\",\"caption\":\"properties zip value\",\"path\":[\"properties\",\"zip\",\"value\"]},\"_p_properties.zip.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.website.value\":{\"ret_value\":\"text\",\"caption\":\"properties website value\",\"path\":[\"properties\",\"website\",\"value\"]},\"_p_properties.website.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.firstname.value\":{\"ret_value\":\"text\",\"caption\":\"properties firstname value\",\"path\":[\"properties\",\"firstname\",\"value\"]},\"_p_properties.firstname.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.address.value\":{\"ret_value\":\"text\",\"caption\":\"properties address value\",\"path\":[\"properties\",\"address\",\"value\"]},\"_p_properties.address.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.city.value\":{\"ret_value\":\"text\",\"caption\":\"properties city value\",\"path\":[\"properties\",\"city\",\"value\"]},\"_p_properties.city.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.phone.value\":{\"ret_value\":\"text\",\"caption\":\"properties phone value\",\"path\":[\"properties\",\"phone\",\"value\"]},\"_p_properties.phone.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.company.value\":{\"ret_value\":\"text\",\"caption\":\"properties company value\",\"path\":[\"properties\",\"company\",\"value\"]},\"_p_properties.company.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.state.value\":{\"ret_value\":\"text\",\"caption\":\"properties state value\",\"path\":[\"properties\",\"state\",\"value\"]},\"_p_properties.state.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.email.value\":{\"ret_value\":\"text\",\"caption\":\"properties email value\",\"path\":[\"properties\",\"email\",\"value\"]},\"_p_properties.email.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.lastname.value\":{\"ret_value\":\"text\",\"caption\":\"properties lastname value\",\"path\":[\"properties\",\"lastname\",\"value\"]},\"_p_properties.lastname.versions\":{\"ret_value\":\"_ignore\"},\"_p_identity-profiles\":{\"ret_value\":\"_ignore\"}}}}",
-            "url": "https://api.hubapi.com/contacts/v1/contact/"
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAH\":{\"caption\":\"Add Contact\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"201001\",\"path\":[\"id\"]},\"_p_properties.address\":{\"ret_value\":\"text\",\"caption\":\"properties address\",\"sample_value\":\"null\",\"path\":[\"properties\",\"address\"]},\"_p_properties.city\":{\"ret_value\":\"text\",\"caption\":\"properties city\",\"sample_value\":\"null\",\"path\":[\"properties\",\"city\"]},\"_p_properties.company\":{\"ret_value\":\"text\",\"caption\":\"properties company\",\"sample_value\":\"null\",\"path\":[\"properties\",\"company\"]},\"_p_properties.country\":{\"ret_value\":\"text\",\"caption\":\"properties country\",\"sample_value\":\"United States\",\"path\":[\"properties\",\"country\"]},\"_p_properties.createdate\":{\"ret_value\":\"date\",\"caption\":\"properties createdate\",\"sample_value\":\"2022-06-03T15:52:16.891Z\",\"path\":[\"properties\",\"createdate\"]},\"_p_properties.email\":{\"ret_value\":\"text\",\"caption\":\"properties email\",\"sample_value\":\"salama+country@i2b.co\",\"path\":[\"properties\",\"email\"]},\"_p_properties.firstname\":{\"ret_value\":\"text\",\"caption\":\"properties firstname\",\"sample_value\":\"salama\",\"path\":[\"properties\",\"firstname\"]},\"_p_properties.hs_all_contact_vids\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_contact_vids\",\"sample_value\":\"201001\",\"path\":[\"properties\",\"hs_all_contact_vids\"]},\"_p_properties.hs_email_domain\":{\"ret_value\":\"text\",\"caption\":\"properties hs_email_domain\",\"sample_value\":\"i2b.co\",\"path\":[\"properties\",\"hs_email_domain\"]},\"_p_properties.hs_is_contact\":{\"ret_value\":\"boolean\",\"caption\":\"properties hs_is_contact\",\"sample_value\":\"true\",\"path\":[\"properties\",\"hs_is_contact\"]},\"_p_properties.hs_is_unworked\":{\"ret_value\":\"boolean\",\"caption\":\"properties hs_is_unworked\",\"sample_value\":\"true\",\"path\":[\"properties\",\"hs_is_unworked\"]},\"_p_properties.hs_object_id\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id\",\"sample_value\":\"201001\",\"path\":[\"properties\",\"hs_object_id\"]},\"_p_properties.hs_pipeline\":{\"ret_value\":\"text\",\"caption\":\"properties hs_pipeline\",\"sample_value\":\"contacts-lifecycle-pipeline\",\"path\":[\"properties\",\"hs_pipeline\"]},\"_p_properties.lastmodifieddate\":{\"ret_value\":\"date\",\"caption\":\"properties lastmodifieddate\",\"sample_value\":\"2022-06-03T15:52:16.891Z\",\"path\":[\"properties\",\"lastmodifieddate\"]},\"_p_properties.lastname\":{\"ret_value\":\"text\",\"caption\":\"properties lastname\",\"sample_value\":\"country\",\"path\":[\"properties\",\"lastname\"]},\"_p_properties.phone\":{\"ret_value\":\"text\",\"caption\":\"properties phone\",\"sample_value\":\"null\",\"path\":[\"properties\",\"phone\"]},\"_p_properties.state\":{\"ret_value\":\"text\",\"caption\":\"properties state\",\"sample_value\":\"null\",\"path\":[\"properties\",\"state\"]},\"_p_properties.website\":{\"ret_value\":\"text\",\"caption\":\"properties website\",\"sample_value\":\"http://null\",\"path\":[\"properties\",\"website\"]},\"_p_properties.zip\":{\"ret_value\":\"text\",\"caption\":\"properties zip\",\"sample_value\":\"null\",\"path\":[\"properties\",\"zip\"]},\"_p_createdAt\":{\"ret_value\":\"date\",\"caption\":\"createdAt\",\"sample_value\":\"2022-06-03T15:52:16.891Z\",\"path\":[\"createdAt\"]},\"_p_updatedAt\":{\"ret_value\":\"date\",\"caption\":\"updatedAt\",\"sample_value\":\"2022-06-03T15:52:16.891Z\",\"path\":[\"updatedAt\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "url": "https://api.hubapi.com/crm/v3/objects/contacts"
         },
         "ABp": {
+            "body": "{\n  \"query\": \"<email>\",\n  \"properties\": [\n    \"email\"\n  ]\n}",
+            "body_params": {
+                "ADN": {
+                    "key": "email",
+                    "private": true,
+                    "value": ""
+                }
+            },
             "initialized": true,
-            "method": "get",
+            "method": "post",
             "name": "Get Contact by email",
             "publish_as": "data",
             "rank": 2,
             "ret_value": "api.1570928942102x865265385814622200.plugin_api.ABp",
             "should_reinitialize": false,
-            "types": "{\"plugin_api.ABp\":{\"caption\":\"Get Contact by email\",\"fields\":{\"_p_vid\":{\"ret_value\":\"number\",\"caption\":\"vid\",\"path\":[\"vid\"]},\"_p_canonical-vid\":{\"ret_value\":\"number\",\"caption\":\"canonical-vid\",\"path\":[\"canonical-vid\"]},\"_p_portal-id\":{\"ret_value\":\"number\",\"caption\":\"portal-id\",\"path\":[\"portal-id\"]},\"_p_is-contact\":{\"ret_value\":\"boolean\",\"caption\":\"is-contact\",\"path\":[\"is-contact\"]},\"_p_profile-token\":{\"ret_value\":\"text\",\"caption\":\"profile-token\",\"path\":[\"profile-token\"]},\"_p_profile-url\":{\"ret_value\":\"text\",\"caption\":\"profile-url\",\"path\":[\"profile-url\"]},\"_p_properties.hs_all_accessible_team_ids.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_accessible_team_ids value\",\"path\":[\"properties\",\"hs_all_accessible_team_ids\",\"value\"]},\"_p_properties.hs_all_accessible_team_ids.versions\":{\"ret_value\":\"list.api.1570928942102x865265385814622200.plugin_api.ABp.properties.hs_all_accessible_team_ids.versions\",\"caption\":\"properties hs_all_accessible_team_ids versions\",\"path\":[\"properties\",\"hs_all_accessible_team_ids\",\"versions\"]},\"_p_properties.num_unique_conversion_events.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.num_unique_conversion_events.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_quarantined.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_email_quarantined value\",\"path\":[\"properties\",\"hs_email_quarantined\",\"value\"]},\"_p_properties.hs_email_quarantined.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_revenue.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_analytics_revenue value\",\"path\":[\"properties\",\"hs_analytics_revenue\",\"value\"]},\"_p_properties.hs_analytics_revenue.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_optout_7497542.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_optout_7497542.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.createdate.value\":{\"ret_value\":\"date_unix\",\"caption\":\"properties createdate value\",\"path\":[\"properties\",\"createdate\",\"value\"]},\"_p_properties.createdate.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_optout.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_email_optout value\",\"path\":[\"properties\",\"hs_email_optout\",\"value\"]},\"_p_properties.hs_email_optout.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_page_views.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_page_views.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.state.value\":{\"ret_value\":\"text\",\"caption\":\"properties state value\",\"path\":[\"properties\",\"state\",\"value\"]},\"_p_properties.state.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.zip.value\":{\"ret_value\":\"text\",\"caption\":\"properties zip value\",\"path\":[\"properties\",\"zip\",\"value\"]},\"_p_properties.zip.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_lifecyclestage_subscriber_date.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_lifecyclestage_subscriber_date.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_average_page_views.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_average_page_views.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.lastname.value\":{\"ret_value\":\"text\",\"caption\":\"properties lastname value\",\"path\":[\"properties\",\"lastname\",\"value\"]},\"_p_properties.lastname.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_is_contact.value\":{\"ret_value\":\"boolean\",\"caption\":\"properties hs_is_contact value\",\"path\":[\"properties\",\"hs_is_contact\",\"value\"]},\"_p_properties.hs_is_contact.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.phone.value\":{\"ret_value\":\"text\",\"caption\":\"properties phone value\",\"path\":[\"properties\",\"phone\",\"value\"]},\"_p_properties.phone.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_predictivecontactscore_v2.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_predictivecontactscore_v2.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.num_conversion_events.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.num_conversion_events.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_object_id.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id value\",\"path\":[\"properties\",\"hs_object_id\",\"value\"]},\"_p_properties.hs_object_id.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_event_completions.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_event_completions.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_hard_bounce_reason_enum.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_email_hard_bounce_reason_enum value\",\"path\":[\"properties\",\"hs_email_hard_bounce_reason_enum\",\"value\"]},\"_p_properties.hs_email_hard_bounce_reason_enum.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.firstname.value\":{\"ret_value\":\"text\",\"caption\":\"properties firstname value\",\"path\":[\"properties\",\"firstname\",\"value\"]},\"_p_properties.firstname.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.city.value\":{\"ret_value\":\"text\",\"caption\":\"properties city value\",\"path\":[\"properties\",\"city\",\"value\"]},\"_p_properties.city.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_all_team_ids.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_team_ids value\",\"path\":[\"properties\",\"hs_all_team_ids\",\"value\"]},\"_p_properties.hs_all_team_ids.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_num_broadcast_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_num_broadcast_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_recipient_fatigue_recovery_time.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_recipient_fatigue_recovery_time.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_timestamp.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_timestamp.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_visits.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_num_visits.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hubspot_team_id.value\":{\"ret_value\":\"text\",\"caption\":\"properties hubspot_team_id value\",\"path\":[\"properties\",\"hubspot_team_id\",\"value\"]},\"_p_properties.hubspot_team_id.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_linkedin_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_linkedin_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_visit_timestamp.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_visit_timestamp.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_last_engagement.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_last_engagement.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_searchable_calculated_phone_number.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_searchable_calculated_phone_number.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_domain.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_email_domain.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_touch_converting_campaign.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_touch_converting_campaign.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.company.value\":{\"ret_value\":\"text\",\"caption\":\"properties company value\",\"path\":[\"properties\",\"company\",\"value\"]},\"_p_properties.company.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_all_owner_ids.value\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_owner_ids value\",\"path\":[\"properties\",\"hs_all_owner_ids\",\"value\"]},\"_p_properties.hs_all_owner_ids.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.email.value\":{\"ret_value\":\"text\",\"caption\":\"properties email value\",\"path\":[\"properties\",\"email\",\"value\"]},\"_p_properties.email.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.website.value\":{\"ret_value\":\"text\",\"caption\":\"properties website value\",\"path\":[\"properties\",\"website\",\"value\"]},\"_p_properties.website.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.address.value\":{\"ret_value\":\"text\",\"caption\":\"properties address value\",\"path\":[\"properties\",\"address\",\"value\"]},\"_p_properties.address.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_visit_timestamp.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_visit_timestamp.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.lastmodifieddate.value\":{\"ret_value\":\"date_unix\",\"caption\":\"properties lastmodifieddate value\",\"path\":[\"properties\",\"lastmodifieddate\",\"value\"]},\"_p_properties.lastmodifieddate.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_timestamp.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_first_timestamp.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_google_plus_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_google_plus_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_touch_converting_campaign.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_last_touch_converting_campaign.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_facebook_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_facebook_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_predictivescoringtier.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_predictivescoringtier.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_twitter_clicks.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_social_twitter_clicks.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source_data_2.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source_data_2.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source_data_1.value\":{\"ret_value\":\"_ignore\"},\"_p_properties.hs_analytics_source_data_1.versions\":{\"ret_value\":\"_ignore\"},\"_p_properties.lifecyclestage.value\":{\"ret_value\":\"text\",\"caption\":\"properties lifecyclestage value\",\"path\":[\"properties\",\"lifecyclestage\",\"value\"]},\"_p_properties.lifecyclestage.versions\":{\"ret_value\":\"_ignore\"},\"_p_identity-profiles\":{\"ret_value\":\"_ignore\"}}},\"plugin_api.ABp.properties.hs_all_accessible_team_ids.versions\":{\"caption\":\"Get Contact by email properties hs_all_accessible_team_ids version\",\"fields\":{\"_p_value\":{\"ret_value\":\"text\",\"caption\":\"value\",\"path\":[\"value\"]},\"_p_source-type\":{\"ret_value\":\"text\",\"caption\":\"source-type\",\"path\":[\"source-type\"]},\"_p_source-id\":{\"ret_value\":\"text\",\"caption\":\"source-id\",\"path\":[\"source-id\"]},\"_p_source-label\":{\"ret_value\":\"text\",\"caption\":\"source-label\",\"path\":[\"source-label\"]},\"_p_timestamp\":{\"ret_value\":\"number\",\"caption\":\"timestamp\",\"path\":[\"timestamp\"]},\"_p_selected\":{\"ret_value\":\"boolean\",\"caption\":\"selected\",\"path\":[\"selected\"]}}}}",
-            "url": "https://api.hubapi.com/contacts/v1/contact/email/[email]/profile",
-            "url_params": {
-                "ABv": {
-                    "key": "email",
-                    "private": true,
-                    "value": "testingapis@hubspot.com"
-                }
-            }
+            "types": "{\"plugin_api.ABp\":{\"caption\":\"Get Contact by email\",\"fields\":{\"_p_total\":{\"ret_value\":\"number\",\"caption\":\"total\",\"sample_value\":1,\"path\":[\"total\"]},\"_p_results\":{\"ret_value\":\"list.api.1570928942102x865265385814622200.plugin_api.ABp.results\",\"caption\":\"results\",\"path\":[\"results\"]}}},\"plugin_api.ABp.results\":{\"caption\":\"Get Contact by email result\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"95351\",\"path\":[\"id\"]},\"_p_properties.createdate\":{\"ret_value\":\"date\",\"caption\":\"properties createdate\",\"sample_value\":\"2020-10-21T18:33:57.206Z\",\"path\":[\"properties\",\"createdate\"]},\"_p_properties.email\":{\"ret_value\":\"text\",\"caption\":\"properties email\",\"sample_value\":\"support@bubble.io\",\"path\":[\"properties\",\"email\"]},\"_p_properties.hs_object_id\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id\",\"sample_value\":\"95351\",\"path\":[\"properties\",\"hs_object_id\"]},\"_p_properties.lastmodifieddate\":{\"ret_value\":\"date\",\"caption\":\"properties lastmodifieddate\",\"sample_value\":\"2022-09-04T01:31:18.002Z\",\"path\":[\"properties\",\"lastmodifieddate\"]},\"_p_createdAt\":{\"ret_value\":\"date\",\"caption\":\"createdAt\",\"sample_value\":\"2020-10-21T18:33:57.206Z\",\"path\":[\"createdAt\"]},\"_p_updatedAt\":{\"ret_value\":\"date\",\"caption\":\"updatedAt\",\"sample_value\":\"2022-09-04T01:31:18.002Z\",\"path\":[\"updatedAt\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "url": "https://api.hubapi.com/crm/v3/objects/contacts/search"
         },
         "ABw": {
-            "body": "{\n  \"properties\": [\n    {\n      \"property\": \"email\",\n      \"value\": \"<Email>\"\n    },\n    {\n      \"property\": \"firstname\",\n      \"value\": \"<FirstName>\"\n    },\n    {\n      \"property\": \"lastname\",\n      \"value\": \"<LastName>\"\n    },\n    {\n      \"property\": \"website\",\n      \"value\": \"<Webite>\"\n    },\n    {\n      \"property\": \"lifecyclestage\",\n      \"value\": \"<lifeCycleStage>\"\n    }\n  ]\n}",
+            "body": "{\n  \"properties\": {\n      \"email\": \"<Email>\",\n      \"firstname\": \"<FirstName>\",\n      \"lastname\": \"<LastName>\",\n      \"website\": \"<Webite>\",\n      \"lifecyclestage\": \"<lifeCycleStage>\"\n    }\n}",
             "body_params": {
                 "ACH": {
                     "key": "Email",
                     "private": true,
-                    "value": "new-email222@hubspot.com"
+                    "value": "test3@gmail.com"
                 },
                 "ACX": {
                     "key": "FirstName",
                     "private": true,
-                    "value": "spot"
+                    "value": ""
                 },
                 "ACf": {
+                    "allow_blank": true,
                     "key": "LastName",
                     "private": true,
-                    "value": "hub"
+                    "value": ""
                 },
                 "ACn": {
+                    "allow_blank": true,
                     "key": "Webite",
                     "private": true,
-                    "value": "http://updated.example.com"
+                    "value": ""
                 },
                 "ACq": {
                     "key": "lifeCycleStage",
                     "private": true,
-                    "value": "customer"
+                    "value": "lead"
                 }
             },
-            "data_type": "text",
-            "get_headers": true,
+            "body_type": "json",
+            "data_type": "JSON",
+            "get_headers": false,
             "initialized": true,
-            "method": "post",
+            "method": "patch",
             "name": "Update Contact",
             "publish_as": "action",
             "rank": 3,
             "ret_value": "api.1570928942102x865265385814622200.plugin_api.ABw",
             "should_reinitialize": true,
-            "types": "{\"plugin_api.ABw\":{\"caption\":\"Update Contact\",\"fields\":{\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"path\":[\"body\"]},\"_p_headers.date\":{\"ret_value\":\"date\",\"caption\":\"headers date\",\"path\":[\"headers\",\"date\"]},\"_p_headers.connection\":{\"ret_value\":\"_ignore\"},\"_p_headers.set-cookie\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-trace\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-daily\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-daily-remaining\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-interval-milliseconds\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-remaining\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-max\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-secondly\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-hubspot-ratelimit-secondly-remaining\":{\"ret_value\":\"_ignore\"},\"_p_headers.access-control-allow-credentials\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-cache-status\":{\"ret_value\":\"_ignore\"},\"_p_headers.expect-ct\":{\"ret_value\":\"_ignore\"},\"_p_headers.strict-transport-security\":{\"ret_value\":\"_ignore\"},\"_p_headers.server\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-ray\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-request-id\":{\"ret_value\":\"_ignore\"}}}}",
-            "url": "https://api.hubapi.com/contacts/v1/contact/vid/[vid]/profile",
+            "types": "{\"plugin_api.ABw\":{\"caption\":\"Update Contact\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"239401\",\"path\":[\"id\"]},\"_p_properties.createdate\":{\"ret_value\":\"date\",\"caption\":\"properties createdate\",\"sample_value\":\"2023-02-01T20:56:06.670Z\",\"path\":[\"properties\",\"createdate\"]},\"_p_properties.email\":{\"ret_value\":\"text\",\"caption\":\"properties email\",\"sample_value\":\"test3@gmail.com\",\"path\":[\"properties\",\"email\"]},\"_p_properties.firstname\":{\"ret_value\":\"text\",\"caption\":\"properties firstname\",\"sample_value\":\"null\",\"path\":[\"properties\",\"firstname\"]},\"_p_properties.hs_is_unworked\":{\"ret_value\":\"text\",\"caption\":\"properties hs_is_unworked\",\"sample_value\":\"true\",\"path\":[\"properties\",\"hs_is_unworked\"]},\"_p_properties.hs_object_id\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id\",\"sample_value\":\"239401\",\"path\":[\"properties\",\"hs_object_id\"]},\"_p_properties.hs_pipeline\":{\"ret_value\":\"text\",\"caption\":\"properties hs_pipeline\",\"sample_value\":\"contacts-lifecycle-pipeline\",\"path\":[\"properties\",\"hs_pipeline\"]},\"_p_properties.hs_pipeline_closedate\":{\"ret_value\":\"date_unix\",\"caption\":\"properties hs_pipeline_closedate\",\"sample_value\":\"1675369979871\",\"path\":[\"properties\",\"hs_pipeline_closedate\"]},\"_p_properties.lastmodifieddate\":{\"ret_value\":\"date\",\"caption\":\"properties lastmodifieddate\",\"sample_value\":\"2023-03-17T16:18:21.645Z\",\"path\":[\"properties\",\"lastmodifieddate\"]},\"_p_properties.lastname\":{\"ret_value\":\"text\",\"caption\":\"properties lastname\",\"sample_value\":\"null\",\"path\":[\"properties\",\"lastname\"]},\"_p_properties.lifecyclestage\":{\"ret_value\":\"text\",\"caption\":\"properties lifecyclestage\",\"sample_value\":\"other\",\"path\":[\"properties\",\"lifecyclestage\"]},\"_p_properties.website\":{\"ret_value\":\"text\",\"caption\":\"properties website\",\"sample_value\":\"null\",\"path\":[\"properties\",\"website\"]},\"_p_createdAt\":{\"ret_value\":\"date\",\"caption\":\"createdAt\",\"sample_value\":\"2023-02-01T20:56:06.670Z\",\"path\":[\"createdAt\"]},\"_p_updatedAt\":{\"ret_value\":\"date\",\"caption\":\"updatedAt\",\"sample_value\":\"2023-03-17T16:18:21.645Z\",\"path\":[\"updatedAt\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "url": "https://api.hubapi.com/crm/v3/objects/contacts/[vid]",
             "url_params": {
                 "ACA": {
+                    "doc": "",
                     "key": "vid",
+                    "private": true,
+                    "value": "239401"
+                }
+            },
+            "wrap_error": false
+        },
+        "ADO": {
+            "initialized": true,
+            "method": "get",
+            "name": "Get Deals",
+            "publish_as": "data",
+            "rank": 4,
+            "ret_value": "api.1570928942102x865265385814622200.plugin_api.ADO",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ADO\":{\"caption\":\"Get Deal\",\"fields\":{\"_p_results\":{\"ret_value\":\"list.api.1570928942102x865265385814622200.plugin_api.ADO.results\",\"caption\":\"results\",\"path\":[\"results\"]},\"_p_paging.next.after\":{\"ret_value\":\"text\",\"caption\":\"paging next after\",\"sample_value\":\"7738411930\",\"path\":[\"paging\",\"next\",\"after\"]},\"_p_paging.next.link\":{\"ret_value\":\"text\",\"caption\":\"paging next link\",\"sample_value\":\"https://api.hubapi.com/crm/v3/objects/deals?after=7738411930\",\"path\":[\"paging\",\"next\",\"link\"]}}},\"plugin_api.ADO.results\":{\"caption\":\"Get Deals result\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"1127594998\",\"path\":[\"id\"]},\"_p_properties.amount\":{\"ret_value\":\"number\",\"caption\":\"properties amount\",\"sample_value\":\"350\",\"path\":[\"properties\",\"amount\"]},\"_p_properties.closedate\":{\"ret_value\":\"date\",\"caption\":\"properties closedate\",\"sample_value\":\"2019-10-31T04:22:11Z\",\"path\":[\"properties\",\"closedate\"]},\"_p_properties.createdate\":{\"ret_value\":\"date\",\"caption\":\"properties createdate\",\"sample_value\":\"2019-10-29T04:23:04.754Z\",\"path\":[\"properties\",\"createdate\"]},\"_p_properties.dealname\":{\"ret_value\":\"text\",\"caption\":\"properties dealname\",\"sample_value\":\"Arabian Nights Ordering System\",\"path\":[\"properties\",\"dealname\"]},\"_p_properties.dealstage\":{\"ret_value\":\"text\",\"caption\":\"properties dealstage\",\"sample_value\":\"closedwon\",\"path\":[\"properties\",\"dealstage\"]},\"_p_properties.hs_lastmodifieddate\":{\"ret_value\":\"date\",\"caption\":\"properties hs_lastmodifieddate\",\"sample_value\":\"2022-06-14T05:11:27.124Z\",\"path\":[\"properties\",\"hs_lastmodifieddate\"]},\"_p_properties.hs_object_id\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id\",\"sample_value\":\"1127594998\",\"path\":[\"properties\",\"hs_object_id\"]},\"_p_properties.pipeline\":{\"ret_value\":\"text\",\"caption\":\"properties pipeline\",\"sample_value\":\"default\",\"path\":[\"properties\",\"pipeline\"]},\"_p_createdAt\":{\"ret_value\":\"date\",\"caption\":\"createdAt\",\"sample_value\":\"2019-10-29T04:23:04.754Z\",\"path\":[\"createdAt\"]},\"_p_updatedAt\":{\"ret_value\":\"date\",\"caption\":\"updatedAt\",\"sample_value\":\"2022-06-14T05:11:27.124Z\",\"path\":[\"updatedAt\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "url": "https://api.hubapi.com/crm/v3/objects/deals"
+        },
+        "ADP": {
+            "body": "{\n    \"properties\": {\n        \"amount\": \"<amount>\",\n        \"closedate\": \"<closedate>\",\n        \"dealname\": \"<dealname>\",\n        \"dealstage\": \"<dealstage>\",\n        \"hubspot_owner_id\": \"<hubspot_owner_id>\",\n        \"pipeline\": \"default\"\n    }\n}",
+            "body_params": {
+                "ADQ": {
+                    "key": "amount",
+                    "private": true,
+                    "value": ""
+                },
+                "ADR": {
+                    "doc": "ISO format ex 2021-12-07T16:50:06.678Z",
+                    "key": "closedate",
+                    "private": true,
+                    "value": ""
+                },
+                "ADS": {
+                    "key": "dealname",
+                    "private": true,
+                    "value": ""
+                },
+                "ADT": {
+                    "doc": "Must match deal stage in HubSpot. Go to settings > Objects > Deals > pipelines > Stage unique identifier",
+                    "key": "dealstage",
+                    "private": true,
+                    "value": ""
+                },
+                "ADU": {
+                    "key": "hubspot_owner_id",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "doc_link": "https://developers.hubspot.com/docs/api/crm/deals",
+            "initialized": true,
+            "method": "post",
+            "name": "Create Deal",
+            "publish_as": "action",
+            "rank": 6,
+            "ret_value": "api.1570928942102x865265385814622200.plugin_api.ADP",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ADP\":{\"caption\":\"Create Deal\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"7677851816\",\"path\":[\"id\"]},\"_p_properties.amount\":{\"ret_value\":\"number\",\"caption\":\"properties amount\",\"sample_value\":\"1200\",\"path\":[\"properties\",\"amount\"]},\"_p_properties.amount_in_home_currency\":{\"ret_value\":\"number\",\"caption\":\"properties amount_in_home_currency\",\"sample_value\":\"1200\",\"path\":[\"properties\",\"amount_in_home_currency\"]},\"_p_properties.closedate\":{\"ret_value\":\"date\",\"caption\":\"properties closedate\",\"sample_value\":\"2021-12-07T16:50:06.678Z\",\"path\":[\"properties\",\"closedate\"]},\"_p_properties.createdate\":{\"ret_value\":\"date\",\"caption\":\"properties createdate\",\"sample_value\":\"2022-01-24T05:34:58.703Z\",\"path\":[\"properties\",\"createdate\"]},\"_p_properties.days_to_close\":{\"ret_value\":\"number\",\"caption\":\"properties days_to_close\",\"sample_value\":\"0\",\"path\":[\"properties\",\"days_to_close\"]},\"_p_properties.dealname\":{\"ret_value\":\"text\",\"caption\":\"properties dealname\",\"sample_value\":\"Test deal\",\"path\":[\"properties\",\"dealname\"]},\"_p_properties.dealstage\":{\"ret_value\":\"text\",\"caption\":\"properties dealstage\",\"sample_value\":\"12556705\",\"path\":[\"properties\",\"dealstage\"]},\"_p_properties.hs_all_accessible_team_ids\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_accessible_team_ids\",\"sample_value\":\"6371392\",\"path\":[\"properties\",\"hs_all_accessible_team_ids\"]},\"_p_properties.hs_all_owner_ids\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_owner_ids\",\"sample_value\":\"39559453\",\"path\":[\"properties\",\"hs_all_owner_ids\"]},\"_p_properties.hs_all_team_ids\":{\"ret_value\":\"text\",\"caption\":\"properties hs_all_team_ids\",\"sample_value\":\"6371392\",\"path\":[\"properties\",\"hs_all_team_ids\"]},\"_p_properties.hs_closed_amount\":{\"ret_value\":\"number\",\"caption\":\"properties hs_closed_amount\",\"sample_value\":\"0\",\"path\":[\"properties\",\"hs_closed_amount\"]},\"_p_properties.hs_closed_amount_in_home_currency\":{\"ret_value\":\"number\",\"caption\":\"properties hs_closed_amount_in_home_currency\",\"sample_value\":\"0\",\"path\":[\"properties\",\"hs_closed_amount_in_home_currency\"]},\"_p_properties.hs_createdate\":{\"ret_value\":\"date\",\"caption\":\"properties hs_createdate\",\"sample_value\":\"2022-01-24T05:34:58.703Z\",\"path\":[\"properties\",\"hs_createdate\"]},\"_p_properties.hs_deal_stage_probability_shadow\":{\"ret_value\":\"number\",\"caption\":\"properties hs_deal_stage_probability_shadow\",\"sample_value\":\"0.1000000000000000055511151231257827021181583404541015625\",\"path\":[\"properties\",\"hs_deal_stage_probability_shadow\"]},\"_p_properties.hs_forecast_amount\":{\"ret_value\":\"number\",\"caption\":\"properties hs_forecast_amount\",\"sample_value\":\"1200\",\"path\":[\"properties\",\"hs_forecast_amount\"]},\"_p_properties.hs_is_closed\":{\"ret_value\":\"boolean\",\"caption\":\"properties hs_is_closed\",\"sample_value\":\"false\",\"path\":[\"properties\",\"hs_is_closed\"]},\"_p_properties.hs_is_closed_won\":{\"ret_value\":\"boolean\",\"caption\":\"properties hs_is_closed_won\",\"sample_value\":\"false\",\"path\":[\"properties\",\"hs_is_closed_won\"]},\"_p_properties.hs_is_deal_split\":{\"ret_value\":\"boolean\",\"caption\":\"properties hs_is_deal_split\",\"sample_value\":\"false\",\"path\":[\"properties\",\"hs_is_deal_split\"]},\"_p_properties.hs_lastmodifieddate\":{\"ret_value\":\"date\",\"caption\":\"properties hs_lastmodifieddate\",\"sample_value\":\"2022-01-24T05:34:58.703Z\",\"path\":[\"properties\",\"hs_lastmodifieddate\"]},\"_p_properties.hs_object_id\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id\",\"sample_value\":\"7677851816\",\"path\":[\"properties\",\"hs_object_id\"]},\"_p_properties.hs_projected_amount\":{\"ret_value\":\"number\",\"caption\":\"properties hs_projected_amount\",\"sample_value\":\"0\",\"path\":[\"properties\",\"hs_projected_amount\"]},\"_p_properties.hs_projected_amount_in_home_currency\":{\"ret_value\":\"number\",\"caption\":\"properties hs_projected_amount_in_home_currency\",\"sample_value\":\"0\",\"path\":[\"properties\",\"hs_projected_amount_in_home_currency\"]},\"_p_properties.hs_user_ids_of_all_owners\":{\"ret_value\":\"text\",\"caption\":\"properties hs_user_ids_of_all_owners\",\"sample_value\":\"9004058\",\"path\":[\"properties\",\"hs_user_ids_of_all_owners\"]},\"_p_properties.hubspot_owner_assigneddate\":{\"ret_value\":\"date\",\"caption\":\"properties hubspot_owner_assigneddate\",\"sample_value\":\"2022-01-24T05:34:58.703Z\",\"path\":[\"properties\",\"hubspot_owner_assigneddate\"]},\"_p_properties.hubspot_owner_id\":{\"ret_value\":\"text\",\"caption\":\"properties hubspot_owner_id\",\"sample_value\":\"39559453\",\"path\":[\"properties\",\"hubspot_owner_id\"]},\"_p_properties.hubspot_team_id\":{\"ret_value\":\"text\",\"caption\":\"properties hubspot_team_id\",\"sample_value\":\"6371392\",\"path\":[\"properties\",\"hubspot_team_id\"]},\"_p_properties.pipeline\":{\"ret_value\":\"text\",\"caption\":\"properties pipeline\",\"sample_value\":\"default\",\"path\":[\"properties\",\"pipeline\"]},\"_p_createdAt\":{\"ret_value\":\"date\",\"caption\":\"createdAt\",\"sample_value\":\"2022-01-24T05:34:58.703Z\",\"path\":[\"createdAt\"]},\"_p_updatedAt\":{\"ret_value\":\"date\",\"caption\":\"updatedAt\",\"sample_value\":\"2022-01-24T05:34:58.703Z\",\"path\":[\"updatedAt\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "url": "https://api.hubapi.com/crm/v3/objects/deals"
+        },
+        "ADW": {
+            "0": "A",
+            "1": "D",
+            "2": "V",
+            "initialized": true,
+            "method": "get",
+            "name": "Get Deal Details",
+            "publish_as": "data",
+            "rank": 5,
+            "ret_value": "api.1570928942102x865265385814622200.plugin_api.ADW",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ADW\":{\"caption\":\"Get Deal Detail\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"1127594998\",\"path\":[\"id\"]},\"_p_properties.amount\":{\"ret_value\":\"number\",\"caption\":\"properties amount\",\"sample_value\":\"350\",\"path\":[\"properties\",\"amount\"]},\"_p_properties.closedate\":{\"ret_value\":\"date\",\"caption\":\"properties closedate\",\"sample_value\":\"2019-10-31T04:22:11Z\",\"path\":[\"properties\",\"closedate\"]},\"_p_properties.createdate\":{\"ret_value\":\"date\",\"caption\":\"properties createdate\",\"sample_value\":\"2019-10-29T04:23:04.754Z\",\"path\":[\"properties\",\"createdate\"]},\"_p_properties.dealname\":{\"ret_value\":\"text\",\"caption\":\"properties dealname\",\"sample_value\":\"Arabian Nights Ordering System\",\"path\":[\"properties\",\"dealname\"]},\"_p_properties.dealstage\":{\"ret_value\":\"text\",\"caption\":\"properties dealstage\",\"sample_value\":\"closedwon\",\"path\":[\"properties\",\"dealstage\"]},\"_p_properties.hs_lastmodifieddate\":{\"ret_value\":\"date\",\"caption\":\"properties hs_lastmodifieddate\",\"sample_value\":\"2022-06-14T05:11:27.124Z\",\"path\":[\"properties\",\"hs_lastmodifieddate\"]},\"_p_properties.hs_object_id\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id\",\"sample_value\":\"1127594998\",\"path\":[\"properties\",\"hs_object_id\"]},\"_p_properties.pipeline\":{\"ret_value\":\"text\",\"caption\":\"properties pipeline\",\"sample_value\":\"default\",\"path\":[\"properties\",\"pipeline\"]},\"_p_createdAt\":{\"ret_value\":\"date\",\"caption\":\"createdAt\",\"sample_value\":\"2019-10-29T04:23:04.754Z\",\"path\":[\"createdAt\"]},\"_p_updatedAt\":{\"ret_value\":\"date\",\"caption\":\"updatedAt\",\"sample_value\":\"2022-06-14T05:11:27.124Z\",\"path\":[\"updatedAt\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "url": "https://api.hubapi.com/crm/v3/objects/deals/[dealId]",
+            "url_params": {
+                "ADc": {
+                    "key": "dealId",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ADd": {
+            "initialized": true,
+            "method": "get",
+            "name": "Get Quotes",
+            "publish_as": "data",
+            "rank": 7,
+            "ret_value": "api.1570928942102x865265385814622200.plugin_api.ADd",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ADd\":{\"caption\":\"Get Quote\",\"fields\":{\"_p_results\":{\"ret_value\":\"list.api.1570928942102x865265385814622200.plugin_api.ADd.results\",\"caption\":\"results\",\"path\":[\"results\"]}}},\"plugin_api.ADd.results\":{\"caption\":\"Get Quotes result\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"41045542\",\"path\":[\"id\"]},\"_p_properties.hs_createdate\":{\"ret_value\":\"date\",\"caption\":\"properties hs_createdate\",\"sample_value\":\"2022-01-22T06:28:42.787Z\",\"path\":[\"properties\",\"hs_createdate\"]},\"_p_properties.hs_expiration_date\":{\"ret_value\":\"date\",\"caption\":\"properties hs_expiration_date\",\"sample_value\":\"2022-02-22T04:59:59.999Z\",\"path\":[\"properties\",\"hs_expiration_date\"]},\"_p_properties.hs_lastmodifieddate\":{\"ret_value\":\"date\",\"caption\":\"properties hs_lastmodifieddate\",\"sample_value\":\"2022-01-22T06:29:00.591Z\",\"path\":[\"properties\",\"hs_lastmodifieddate\"]},\"_p_properties.hs_object_id\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id\",\"sample_value\":\"41045542\",\"path\":[\"properties\",\"hs_object_id\"]},\"_p_properties.hs_public_url_key\":{\"ret_value\":\"text\",\"caption\":\"properties hs_public_url_key\",\"sample_value\":\"bYdQu8ty-c8tS3C9Yyn\",\"path\":[\"properties\",\"hs_public_url_key\"]},\"_p_properties.hs_status\":{\"ret_value\":\"text\",\"caption\":\"properties hs_status\",\"sample_value\":\"APPROVAL_NOT_NEEDED\",\"path\":[\"properties\",\"hs_status\"]},\"_p_properties.hs_title\":{\"ret_value\":\"text\",\"caption\":\"properties hs_title\",\"sample_value\":\"Custom data integrations\",\"path\":[\"properties\",\"hs_title\"]},\"_p_createdAt\":{\"ret_value\":\"date\",\"caption\":\"createdAt\",\"sample_value\":\"2022-01-22T06:28:42.787Z\",\"path\":[\"createdAt\"]},\"_p_updatedAt\":{\"ret_value\":\"date\",\"caption\":\"updatedAt\",\"sample_value\":\"2022-01-22T06:29:00.591Z\",\"path\":[\"updatedAt\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "url": "https://api.hubapi.com/crm/v3/objects/quotes"
+        },
+        "ADg": {
+            "0": "A",
+            "1": "D",
+            "2": "f",
+            "initialized": true,
+            "method": "get",
+            "name": "Get Quote Details",
+            "publish_as": "data",
+            "rank": 8,
+            "ret_value": "api.1570928942102x865265385814622200.plugin_api.ADg",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.ADg\":{\"caption\":\"Get Quote Detail\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"41045542\",\"path\":[\"id\"]},\"_p_properties.hs_createdate\":{\"ret_value\":\"date\",\"caption\":\"properties hs_createdate\",\"sample_value\":\"2022-01-22T06:28:42.787Z\",\"path\":[\"properties\",\"hs_createdate\"]},\"_p_properties.hs_expiration_date\":{\"ret_value\":\"date\",\"caption\":\"properties hs_expiration_date\",\"sample_value\":\"2022-02-22T04:59:59.999Z\",\"path\":[\"properties\",\"hs_expiration_date\"]},\"_p_properties.hs_lastmodifieddate\":{\"ret_value\":\"date\",\"caption\":\"properties hs_lastmodifieddate\",\"sample_value\":\"2022-01-22T06:29:00.591Z\",\"path\":[\"properties\",\"hs_lastmodifieddate\"]},\"_p_properties.hs_object_id\":{\"ret_value\":\"text\",\"caption\":\"properties hs_object_id\",\"sample_value\":\"41045542\",\"path\":[\"properties\",\"hs_object_id\"]},\"_p_properties.hs_public_url_key\":{\"ret_value\":\"text\",\"caption\":\"properties hs_public_url_key\",\"sample_value\":\"bYdQu8ty-c8tS3C9Yyn\",\"path\":[\"properties\",\"hs_public_url_key\"]},\"_p_properties.hs_status\":{\"ret_value\":\"text\",\"caption\":\"properties hs_status\",\"sample_value\":\"APPROVAL_NOT_NEEDED\",\"path\":[\"properties\",\"hs_status\"]},\"_p_properties.hs_title\":{\"ret_value\":\"text\",\"caption\":\"properties hs_title\",\"sample_value\":\"Custom data integrations\",\"path\":[\"properties\",\"hs_title\"]},\"_p_createdAt\":{\"ret_value\":\"date\",\"caption\":\"createdAt\",\"sample_value\":\"2022-01-22T06:28:42.787Z\",\"path\":[\"createdAt\"]},\"_p_updatedAt\":{\"ret_value\":\"date\",\"caption\":\"updatedAt\",\"sample_value\":\"2022-01-22T06:29:00.591Z\",\"path\":[\"updatedAt\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "url": "https://api.hubapi.com/crm/v3/objects/quotes/[quoteId]",
+            "url_params": {
+                "ADk": {
+                    "key": "quoteId",
                     "private": true,
                     "value": ""
                 }
@@ -163,5 +288,5 @@
         }
     },
     "token_data_type": true,
-    "token_param_name": "hapikey"
+    "token_param_name": "Authorization"
 }

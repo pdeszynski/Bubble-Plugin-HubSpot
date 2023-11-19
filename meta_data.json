@@ -8,5 +8,6 @@
     "license": "open_source",
     "link": "https://developers.hubspot.com/",
     "name": "HubSpot",
-    "plugin_instructions": "Go to your HubSpot Account > Settings > Integrations > API Key\n\nUser ID. You can find it in your HubSpot dashboard URL\n\nIf you have an issue contact us directly here\nI2B Plugin Support\nhttps://i2b.co/plugins-support"
+    "plugin_instructions": "Go to your HubSpot Account > Settings > Integrations > Private Apps > Create private app > Enter your Basic Info > Scopes select contacts, deals & quotes (read and write)\n\nCopy the Private App Access Token to the plugin as\nBearer ACCESS_TOKEN\n\nUser ID. You can find it in your HubSpot dashboard URL\n\nIf you have an issue contact us directly here\nI2B Plugin Support\nhttps://i2b.co/plugins-support",
+    "sa_node_version": 18
 }
