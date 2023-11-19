@@ -1,5 +1,60 @@
 {
     "category": "plugins",
-    "display": "HubSpot - Update Contact (custom)",
-    "type": "client_side"
+    "display": "HubSpot - Add Contact (custom)",
+    "fields": {
+        "ADo": {
+            "caption": "Contact Data",
+            "doc": "https://developers.hubspot.com/docs/api/crm/contacts#create-contacts",
+            "editor": "key_value_list",
+            "name": "contactinfo",
+            "rank": 0,
+            "value": "text"
+        },
+        "ADs": {
+            "caption": "Add the keys as named under your HubSpot account. To get the properties internal names  go to HubSpot > Settings > Data Management > Properties",
+            "editor": "Label",
+            "name": "how_it_works",
+            "rank": 2
+        },
+        "ADu": {
+            "caption": "Instructions",
+            "editor": "Label",
+            "name": "instructions",
+            "rank": 1
+        },
+        "ADv": {
+            "caption": "Example Keys",
+            "editor": "Label",
+            "name": "examples",
+            "rank": 3
+        },
+        "ADw": {
+            "caption": "email, firstname, lastname",
+            "editor": "Label",
+            "name": "example_details",
+            "rank": 4
+        }
+    },
+    "return_value": {
+        "ADp": {
+            "caption": "Contact Id",
+            "name": "hsid",
+            "rank": 0,
+            "value": "text"
+        },
+        "ADq": {
+            "caption": "Error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "ADr": {
+            "caption": "Error message",
+            "name": "errormessage",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": true
 }
