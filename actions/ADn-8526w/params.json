@@ -6,8 +6,14 @@
             "caption": "Contact Data",
             "editor": "key_value_list",
             "name": "contactinfo",
-            "rank": 0,
+            "rank": 1,
             "value": "text"
+        },
+        "ADs": {
+            "caption": "Add the custom keys as named under the HubSpot Account. To get the properties internal names  go to Settings > Data Management > Properties",
+            "editor": "Label",
+            "name": "how_it_works",
+            "rank": 0
         }
     },
     "return_value": {
